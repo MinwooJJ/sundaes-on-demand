@@ -9,6 +9,6 @@ test('displays image for each scoop option from server', () => {
   expect(scoopImages).toHaveLength(2);
 
   // confirm alt text of images
-  const altText = scoopImages.man((element) => element.alt);
+  const altText = scoopImages.map((element) => element.alt);
   expect(altText).toEqual(['Chocolate scoop', 'Vanilla scoop']);
 });
